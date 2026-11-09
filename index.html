@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alisa Rides — персональные заказы</title>
+<style>
+:root{--bg:#fff;--ink:#222;--muted:#666;--line:#e3e3e3;--soft:#f5f5f5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-weight:600;letter-spacing:.04em}
+.age{border:1px solid #999;border-radius:4px;padding:1px 7px;font-size:13px}
+.banner{width:100%;aspect-ratio:1888/560;background:#ececec;display:block;object-fit:cover}
+h1{font-size:clamp(26px,4vw,40px);font-weight:500;margin:32px 0 8px;line-height:1.2}
+.lead{color:var(--muted);max-width:620px;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
+.card summary{list-style:none;cursor:pointer;padding:18px;display:flex;gap:14px;align-items:center}
+.card summary::-webkit-details-marker{display:none}
+.card summary:hover{background:var(--soft)}
+.card summary:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.ico{font-size:26px;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+.t{font-weight:500;font-size:17px}
+.p{color:var(--muted);font-size:14px}
+.plus{margin-left:auto;font-size:22px;color:var(--muted);transition:transform .2s}
+.card[open] .plus{transform:rotate(45deg)}
+.body{padding:4px 18px 20px;border-top:1px solid var(--line);font-size:15px}
+.body ul{padding-left:20px;margin:10px 0}
+.body .price{font-weight:500;margin-top:12px}
+.btn{display:block;text-align:center;background:var(--ink);color:#fff;text-decoration:none;border-radius:8px;padding:13px;margin:36px 0 0;font-size:16px}
+.btn:hover{background:#000}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.how{margin:36px 0 0;padding:20px;background:var(--soft);border-radius:10px;font-size:14px;color:var(--muted)}
+footer{margin-top:40px;padding:20px 0 32px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.plus{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><span class="logo">ALISA RIDES</span><span class="age">18+</span></div></header>
+
+<!-- Вставьте свой баннер 1888x560: замените banner.jpg на имя вашего файла -->
+<img class="banner" src="banner.jpg" alt="Alisa Rides" onerror="this.removeAttribute('src')">
+
+<main class="wrap">
+<h1>Персональные заказы</h1>
+<p class="lead">Видео на заказ и вещи из личного гардероба. Только легальный 18+ контент, без порно и без наготы.</p>
+
+<div class="grid">
+<details class="card"><summary><span class="ico">&#127910;</span><span><span class="t">Видео на заказ</span><br><span class="p">Ваша идея, моя съёмка</span></span><span class="plus">+</span></summary>
+<div class="body">
+<p>Короткое видео, снятое лично для вас. Без откровенных сцен.</p>
+<ul><li>Завожу машину или мотоцикл, еду, паркуюсь</li><li>Тренировка или растяжка в спортивной одежде</li><li>Видео по вашему сценарию с обращением по имени</li></ul>
+<p class="price">от 20 $ за видео до 15 секунд</p></div></details>
+
+<details class="card"><summary><span class="ico">&#128085;</span><span><span class="t">Личные вещи</span><br><span class="p">Из моего гардероба</span></span><span class="plus">+</span></summary>
+<div class="body">
+<p>Вещи, которые я действительно носила. Упаковка аккуратная и анонимная.</p>
+<ul><li>Спортивная одежда после тренировки</li><li>Носки и перчатки</li><li>Можно выбрать вещь и срок носки</li></ul>
+<p class="price">от 30 $, доставка отдельно</p></div></details>
+
+<details class="card"><summary><span class="ico">&#127908;</span><span><span class="t">Голосовые сообщения</span><br><span class="p">Шёпот, пожелания, чтение</span></span><span class="plus">+</span></summary>
+<div class="body">
+<p>Аудио, записанное для вас.</p>
+<ul><li>Шёпот и мягкий голос</li><li>Пожелание доброго утра или спокойной ночи</li><li>Чтение вслух: книга, стихи или ваш текст</li></ul>
+<p class="price">от 10 $ за запись до 1 минуты</p></div></details>
+
+<details class="card"><summary><span class="ico">&#9993;</span><span><span class="t">Открытки и мерч</span><br><span class="p">С подписью от меня</span></span><span class="plus">+</span></summary>
+<div class="body">
+<p>Физические вещи с автографом.</p>
+<ul><li>Подписанная открытка с вашим именем</li><li>Фото с автографом</li><li>Мерч с моей символикой</li></ul>
+<p class="price">от 15 $, доставка отдельно</p></div></details>
+</div>
+
+<div class="how"><strong>Как заказать.</strong> Напишите в Telegram, опишите, что хотите. Я подтвержу возможность и цену, после оплаты начну работу. Что я не делаю: порно, обнажённое тело, любые требования, нарушающие закон.</div>
+
+<a class="btn" href="https://t.me/your_username">Написать в Telegram</a>
+</main>
+
+<footer><div class="wrap">Сайт предназначен для лиц старше 18 лет. Заходя на него, вы подтверждаете свой возраст.</div></footer>
+</body>
+</html>
